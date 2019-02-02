@@ -1,0 +1,79 @@
+Applied Machine Learning Process # https://machinelearningmastery.com/process-for-working-through-machine-learning-problems/
+
+5-Step Systematic Process
+I liked to use a 5-step process:
+1.	Define the Problem
+2.	Prepare Data            # analyze data (summarize and graph) and (prepare samples for experiments)
+3.	Spot Check Algorithms   # may involve multiple formal experiment
+4.	Improve Results
+5.	Present Results
+
+Adapted from the standard data mining process of knowledge discovery in databases (or KDD)
+
+1. Define the Problem
+I like to use a three step process to define the problem. I like to move quickly and I use this mini process to see the problem 
+from a few different perspectives very quickly:
+  •	Step 1: What is the problem? Describe the problem informally and formally and list assumptions and similar problems.
+  •	Step 2: Why does the problem need to be solved? List your motivation for solving the problem, the benefits a solution provides 
+    and how the solution will be used.
+  •	Step 3: How would I solve the problem? Describe how the problem would be solved manually to flush domain knowledge.
+You can learn more about this process in the post:
+
+2. Prepare Data
+summarizing the attributes 
+visualizing them using scatter plots and histograms. 
+detail each attribute and relationships between attributes. 
+The actual data preparation process is three step as follows:
+•	Step 1: Data Selection: Consider what data is available, what data is missing and what data can be removed.
+•	Step 2: Data Preprocessing: Organize your selected data by formatting, cleaning and sampling from it.
+•	Step 3: Data Transformation: Transform preprocessed data ready for machine learning by engineering features using scaling, 
+attribute decomposition and attribute aggregation.
+
+3. Spot Check Algorithms
+I use 10 fold cross validation in my test harnesses by default. All experiments (algorithm and dataset combinations) are repeated 
+10 times and the mean and standard deviation of the accuracy is collected and reported. I also use statistical significance tests 
+to flush out meaningful results from noise. Box-plots are very useful for summarizing the distribution of accuracy results for each 
+algorithm and dataset pair.
+
+I spot check algorithms, which means loading up a bunch of standard machine learning algorithms into my test harness and performing 
+a formal experiment. I typically run 10-20 standard algorithms from all the major algorithm families across all the transformed and 
+scaled versions of the dataset I have prepared.
+
+The goal of spot checking is to flush out the types of algorithms and dataset combinations that are good at picking out the structure 
+of the problem so that they can be studied in more detail with focused experiments.
+More focused experiments with well-performing families of algorithms may be performed in this step, but algorithm tuning is left for 
+the next step.
+
+4. Improve Results
+After spot checking, it’s time to squeeze out the best result from the rig. I do this by running an automated sensitivity analysis 
+on the parameters of the top performing algorithms. I also design and run experiments using standard ensemble methods of the top 
+performing algorithms. I put a lot of time into thinking about how to get more out of the dataset or of the family of algorithms 
+that have been shown to perform well.
+
+Again, statistical significance of results is critical here. It is so easy to focus on the methods and play with algorithm 
+configurations. The results are only meaningful if they are significant and all configuration are already thought out and the 
+experiments are executed in batch. I also like to maintain my own personal leaderboard of top results on a problem.
+
+In summary, the process of improving results involves:
+  •	Algorithm Tuning: where discovering the best models is treated like a search problem through model parameter space.
+  •	Ensemble Methods: where the predictions made by multiple models are combined.
+  •	Extreme Feature Engineering: where the attribute decomposition and aggregation seen in data preparation is pushed to the limits.
+
+5. Present Results
+The results of a complex machine learning problem are meaningless unless they are put to work. This typically means a presentation 
+to stakeholders. Even if it is a competition or a problem I am working on for myself, I still go through the process of presenting 
+the results. It’s a good practice and gives me clear learnings I can build upon next time.
+
+The template I use to present results is below and may take the form of a text document, formal report or presentation slides.
+  •	Context (Why): Define the environment in which the problem exists and set up the motivation for the research question.
+  •	Problem (Question): Concisely describe the problem as a question that you went out and answered.
+  •	Solution (Answer): Concisely describe the solution as an answer to the question you posed in the previous section. Be specific.
+  •	Findings: Bulleted lists of discoveries you made along the way that interests the audience. They may be discoveries in the data, 
+  methods that did or did not work or the model performance benefits you achieved along your journey.
+  •	Limitations: Consider where the model does not work or questions that the model does not answer. Do not shy away from these 
+  questions, defining where the model excels is more trusted if you can define where it does not excel.
+  •	Conclusions (Why+Question+Answer): Revisit the “why”, research question and the answer you discovered in a tight little package 
+  that is easy to remember and repeat for yourself and others.
+
+
+
