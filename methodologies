@@ -1,0 +1,186 @@
+Data Mining: Practical Machine Learning Tools and Techniques
+Amazon ImageThis is a textbook by Ian Witten and Eibe Frank.
+
+From the preface, the authors comment:
+
+“Data mining is the extraction of implicit, previously unknown, and potentially useful information from data. The idea is to build computer programs that sift through databases automatically, seeking regularities or patterns. Strong patterns, if found, will likely generalize to make accurate predictions on future data. … Machine learning provides the technical basis for data mining. It is used to extract information from the raw data in databases…”
+
+In chapter 1 of the book, the authors write:
+
+“Data mining is defined as the process of discovering patterns in data. The process must be automatic or (more usually) semiautomatic. The patterns discovered must be meaningful in that hey lead to some advantage, usually an economic one. The data is invariably present in substantial quantities.”
+
+I read this book early in my entry into the field and this definition of data mining and its relationship with machine learning has stuck with me. When I apply machine learning methods, I apply a process that looks like the data mining process, except I am not trying to discover patterns per se, rather I am trying to find a “good enough” solution to a well defined problem.
+
+Data Mining: Concepts and Techniques
+Amazon ImageThis is a textbook by Jiawei Han and Micheline Kamber.
+
+In the preface the authors write:
+
+“Data mining, also popularly referred to as knowledge discovery from data (KDD), is the automated or convenient extraction of patterns representing knowledge implicitly stored or captured in large databases, data warehouses, the Web, other massive information repositories or data streams.”
+
+This is a slightly different definition of KDD that I believe is standard in the field. I believe the preferred definition of KDD is Knowledge Discovery in Databases.
+
+In chapter 1, the authors summarize the KDD process (pages 7 and 8):
+
+Data cleaning to remove noise and inconsistent data.
+Data integration, where multiple data sources may be combined.
+Data selection, where data relevant to the analysis task are retrieved from the database.
+Data transformation, where data are transformed and consolidated into forms appropriate for mining by preforming summary or aggregation operations.
+Data mining, which is an essential process where intelligent methods are applied to extract data patterns.
+Pattern evaluation to identify the truly interesting patterns representing knowledge based on interesting measures.
+Knowledge presentation, where visualization and knowledge representation techniques are used to present mined knowledge to users.
+KDD
+
+In this book, the authors comment that data mining more commonly refers to the whole Knowledge Discovery from Data process, probably because it is a shorter term.
+
+Authoritative Articles
+In this section we will explore the process of Knowledge Discovery in Databases (KDD) in authoritative articles in the field. These are both articles in repreitable technical macgainzes rather than peer reviewed journal articles. Nevertheless, the less formal tone allows for a useful discussion of this high-level topic.
+
+From Data Mining to Knowledge Discovery in Databases
+This was an article in AI Magazine in 1996 by Usama Fayyad, Gregory Piatetsky-Shapiro and Padhraic Smyth.
+
+They define KDD as Knowledge Discovery in Databases and this is a definition I am more familiar with:
+
+“… the KDD field is concerned with the development of methods and techniques for making sense of data. … At the core of the process is the application of specific data-mining methods for pattern discovery and extraction.”
+
+and
+
+“… KDD refers to the overall process of discovering useful knowledge from data, and data mining refers to a particular step in this process. Data mining is the application of specific algorithms for extracting patterns from data.”
+
+The authors provide a useful summarization of KDD in a picture with entities in boxes and processes that connect the boxes as transforms on entities. This depiction is summarized below . I am reticent to reproduce the image, sorry, formal publications can be difficult in this regard.
+
+Step 1: Selection (data into target data)
+Step 2: Preprocessing (target data into processed data)
+Step 3: Transformation (processed data into transformed data)
+Step 4: Data Mining (transformed data into patterns)
+Step 5: Interpretation and/or Evaluation patterns into knowledge)
+This process is simple and it is the model that I like to use when working on a problem.
+
+The KDD Process for Extracting Useful Knowledge from Volumes of Data
+This was an article in the Communications of he ACM in 1996 by Usama Fayyad, Gregory Piatetsky-Shapiro and Padhraic Smyth.
+
+In this article, the authors give a more detailed summary of the KDD process. This more detailed version was in the “From Data Mining…” article above but I felt was less clearly presented. This more detailed summary of the KDD process is paraphrased below.
+
+Understand the application domain and the goal of the process
+Create target dataset as a subset of all the data that is available
+Data cleaning and preprocessing to remove noise, handling missing data and outliers
+Data reduction and projection in order to focus on the features that are relevant to the problem
+Match goals of process to a data mining method. Decide the purpose of the model such as summarization or classification.
+Choose the data mining algorithms to match the purpose of the model (from step 5)
+Data mining, i.e. run algorithms on data.
+Interpretation of mined patterns to make them understandable by the user, such as summarization and visualization.
+Acting on the discovered knowledge, such as reporting or making decisions.
+I like the detail in this process. It really spells out the need to understand the objectives of the process and enduring the algorithm selected matches those objectives.
+
+
+Crisp-DM
+Cross-industry standard process for data mining, known as CRISP-DM,[1] is an open standard process model that describes common approaches used by data mining experts. It is the most widely-used analytics model.[2]
+
+In 2015, IBM corporation released a new methodology called Analytics Solutions Unified Method for Data Mining/Predictive Analytics[3] [4] (also known as ASUM-DM) which refines and extends CRISP-DM.
+
+
+Contents
+1	History
+2	Major phases
+3	Polls
+4	References
+History
+CRISP-DM was conceived in 1996 and became a European Union project under the ESPRIT funding initiative in 1997. The project was led by five companies: Integral Solutions Ltd (ISL), Teradata, Daimler AG, NCR Corporation and OHRA, an insurance company.
+
+This core consortium brought different experiences to the project: ISL, later acquired and merged into SPSS. The computer giant NCR Corporation produced the Teradata data warehouse and its own data mining software. Daimler-Benz had a significant data mining team. OHRA was just starting to explore the potential use of data mining.
+
+The first version of the methodology was presented at the 4th CRISP-DM SIG Workshop in Brussels in March 1999,[5] and published as a step-by-step data mining guide later that year.[6]
+
+Between 2006 and 2008 a CRISP-DM 2.0 SIG was formed and there were discussions about updating the CRISP-DM process model.[7][8] The current status of these efforts is not known. However, the original crisp-dm.org website cited in the reviews,[9][10] and the CRISP-DM 2.0 SIG website[7][8] are both no longer active.
+
+While many non-IBM data mining practitioners use CRISP-DM,[11][12][13][7] IBM is the primary corporation that currently embraces[peacock term] the CRISP-DM process model. It makes some of the old CRISP-DM documents available for download[6] and it has incorporated it into its SPSS Modeler product.
+
+Based on current research CRISP-DM is the most widely used form of data-mining model because of its various advantages which solved the existing problems in the data mining industries. Some of the drawbacks of this model is that it does not perform project management activities. The fact behind the success of CRISP-DM is that it is industry, tool, and application neutral.[14]
+
+Major phases
+CRISP-DM breaks the process of data mining into six major phases.[15]
+
+The sequence of the phases is not strict and moving back and forth between different phases as it is always required. The arrows in the process diagram indicate the most important and frequent dependencies between phases. The outer circle in the diagram symbolizes the cyclic nature of data mining itself. A data mining process continues after a solution has been deployed. The lessons learned during the process can trigger new, often more focused business questions, and subsequent data mining processes will benefit from the experiences of previous ones.
+
+
+OSEMN
+OSEMN Process
+OSEMN is an acronym that rhymes with “possum” or “awesome” and stands for Obtain, Scrub, Explore, Model, and iNterpret.
+
+It is a list of tasks a data scientist should be familiar and comfortable working on. Although, the authors point out that no data scientist will be an expert at all of them.
+
+In addition to a list of tasks, OSEMN can be used as a blueprint for working on data problems using machine learning tools.
+
+From the process, the authors point out that data hacking fits into the “O” and “S” tasks and machine learning fits into the “E” and “M” tasks, and that data science requires a combination of all elements.
+
+1. Obtain Data
+The authors point out that manual processes of data collection do not scale and that you must learn how to automatically obtain the data you need for a given problem.
+
+They point to manual processes like pointing and clicking with a mouse and copy and pasting data from documents.
+
+The authors suggest that you adopt a range of tools and use the one most suitable for the job at hand. They point to unix command line tools, SQL in databases, web scraping and scripting using Python and shell scripts.
+
+Finally, the authors point to the importance of using APIs to access data, where an API may be public or internal to your organization. Often data is presented in JSON and scripting languages like Python can make data retrieval a lot easier.
+
+2. Scrub Data
+The data that you obtain will be messy.
+
+Real data can have inconsistencies, missing values and various other forms of corruption. If it was scraped from a difficult data source, it may require tripping and cleaning up. Even clean data may require post-processing to make it uniform and consistent.
+
+Data cleaning or scrubbing requires “command line fu” and simple scripting.
+
+The authors point out that data cleaning is the least sexy part of working on data problems but good data cleaning may provide the most benefits in terms of the results that you can achieve.
+
+A simple analysis of clean data can be more productive than a complex analysis of noisy and irregular data.
+
+The authors point to simple command line tools such as sed, awk, grep and scripting languages like Python and Perl.
+
+For more information, take a look at the Data Preparation Process.
+
+3. Explore Data
+Explore in this case refers to exploratory data analysis.
+
+This is where there is no hypothesis that is being tested and no predictions that are being evaluated.
+
+Data exploration is useful for getting to know your data, for building an intuition for it’s form and for getting ideas for data transforms and even predictive models to use later on in the process.
+
+The authors list a number of methods that may be helpful in this task:
+
+Command Line Tools for inspecting the data like more, less, head, tail or whatever.
+Histograms to summarize the distribution of individual data attributes.
+Pairwise Histograms to plot attributes against each other and highlight relationships and outliers
+Dimensionality Reduction methods for creating lower dimensional plots and models of the data
+Clustering to expose natural groupings in the data
+For more information, take a look at Exploratory Data Analysis.
+
+4. Model Data
+Model accuracy is often the ultimate goal for a given data problem. This means that the most predictive model is the filter by which a model is chosen.
+
+often the ‘best’ model is the most predictive model
+
+Generally the goal is to use a model predict and interpret. Prediction can be evaluated quantitatively, whereas interpretation is softer and qualitative.
+
+A model’s predictive accuracy can be evaluated by how well it performs on unseen data. It can be estimated using methods such as cross validation.
+
+The algorithms that you try and your biases and reduction on the hypothesis space of possible models that can be constructed for the problem. Choose wisely.
+
+For more information, take a look at How to Evaluate Models and How To Spot-Check Algorithms.
+
+5. Interpret Results
+The purpose of computing is insight, not numbers
+
+— Richard Hamming
+
+The authors use the example of handwritten digit recognition. They point out that a model for this problem does not have a theory of each number, rather it is a mechanism to discriminate between numbers.
+
+This example highlights that the concerns of predicting may not be the same as model interpretation. In fact, they may conflict. A complex model may be highly predictive, but the number of terms or data transforms performed may make understanding why specific predictions are made in the context of the domain nearly impossible.
+
+The predictive power of a model is determined by its ability to generalize. The authors suggest that the interpretative power of a model are its abilities to suggest the most interesting experiments to perform next. It gives insights into the problem and the domain.
+
+The authors point to three key concerns when choosing a model to balance predictive and interpretability of a model:
+
+Choose a good representation, the form of the data that you obtain, most data is messy.
+Choose good features, the attributes of the data that you select to model
+Choose a good hypothesis space, constrained by the models and data transforms you select.
+
+
